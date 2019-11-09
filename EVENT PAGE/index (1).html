@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Poker game</h1>
+  <p>Come to our cool game!</p>
+  <div id="date">Oct 30, 2019 20:00</div>
+  <div id="timeUntil">1 year away</div>
+
+  <script>
+    today=new Date();
+    var pokerDate = new Date('Oct 27, 2019 20:00:00');
+
+    var one_day=1000*60*60*24;
+
+    var daysAway = Math.ceil((pokerDate.getTime() - today.getTime())/(one_day));
+    console.log("daysAway", daysAway)
+
+    var daysAwayMsg = "";
+
+    if (daysAway < 1) {
+      daysAwayMsg = "Sorry you missed it :(";
+    } else if (daysAway == 1) {
+      daysAwayMsg = "OMG it's today!";
+    } else if (daysAway == 2) {
+      daysAwayMsg = "It's tomorrow";
+    } else {
+      daysAwayMsg = "It's in " + daysAway + " days";
+    }
+
+    var date = document.getElementById('date');
+    date.innerHTML = pokerDate;
+
+    var timeUntil = document.getElementById('timeUntil');
+    timeUntil.innerHTML = daysAwayMsg;
+  </script>
+</body>
+</html>

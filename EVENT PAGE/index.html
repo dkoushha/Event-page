@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Event Website</title>
+    <link rel="stylesheet" href="event-page2.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="event-name">
+          <h1>Pumpking carving</h1>
+        </div>
+        <div id="host-box">
+          <h6>hosted by Dima and Adam</h6>
+        </div>
+      </div>
+    </header>
+    <section id="img-section">
+      <div class="container">
+        <div id="event-img">
+          <img src="pumpkin photo.png" alt="pumpking-img">
+        </div>
+      </div>
+    </section>
+    <section id="date-location">
+      <div class="container">
+        <div class="box">
+          <img src="np_clock_2904983_000000 1.png" alt="clock-img">
+          <p>Saturday, 8pm<br>October 15.2019</p>
+        </div>
+        <div class="box">
+          <img src="np_map_1854991_000000 1.png" alt="map-img">
+          <p>Samariterstraße 31 <br> 10247, Berlin</p>
+        </div>
+      </div>
+    </section>
+    <section id="content">
+      <div class="container">
+        <div id="date">
+        </div>
+        <div class="box-content">
+          <p>Hello everyone! It’s getting cold and windy outside, which means Halloween is right around the corner.</p>
+
+          <p>Come by our place this Saturday and help us carve pumpkins! We’ll supply everything including the tools and the pumpkins, but please send an RSVP so we can get the right amount. Or bring your own pumpkin if you prefer to select your own.</p>
+
+          <p>See you Saturday! 🎃👻</p>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+    <iframe name="hidden_iframe" id="hidden_iframe" onload="if(submitted) {window.location='index.html';}"></iframe>
+
+      <form id="form" class="post" action="https://docs.google.com/forms/d/e/1FAIpQLSdmKUVtSw6gVlaDfduZsHyWJrQ1hZ7bhkmdBFR30h6zENtxfw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+        <div class="select-form">
+          <h4 id="answer">Are you coming?</h4>
+          <select name="entry.668466411" required>
+            <option  value="Yes">Yes</option>
+            <option  value="No">No</option>
+            <option  value="Maybe">Maybe</option>
+          </select>
+          <input type="radio" name= "entry.1145866493" value="+1">+1
+        </div>
+        <div class="input">
+          <input class="inside-input" type="text" name= "entry.1502333987" placeholder="Type your name">
+        </div>
+        <div class="button">
+          <button id="messege" type="submit" name="submit">RSVP</button>
+        </div>
+      </form>
+
+    </section>
+    <script>
+      today=new Date();
+      var pokerDate = new Date('Oct 31, 2019 20:00:00');
+
+      var one_day=1000*60*60*24;
+
+      var daysAway = Math.ceil((pokerDate.getTime() - today.getTime())/(one_day));
+      console.log("daysAway", daysAway)
+
+      var daysAwayMsg = "";
+
+      if (daysAway < 1) {
+        daysAwayMsg = "Sorry you missed it :(";
+      } else if (daysAway == 1) {
+        daysAwayMsg = "OMG it's today!";
+      } else if (daysAway == 2) {
+        daysAwayMsg = "It's tomorrow";
+      } else {
+        daysAwayMsg = "It's in " + daysAway + " days";
+      }
+
+      var date = document.getElementById('date');
+      date.innerHTML = daysAwayMsg;
+    </script>
+    <script >
+      var submitted=false;
+    </script>
+
+  </body>
+</html>

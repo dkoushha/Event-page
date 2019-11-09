@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap');
+body{
+  padding: 0;
+  margin: 0;
+  background: #EDE7DE;
+  font: 15px/1.5 'Roboto';
+
+}
+/*Global*/
+.container{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+/*Header*/
+header{
+  padding-top: 107px;
+  min-height: 50px;
+}
+header h1{
+  color: #16676A;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 63px;
+  margin: 0;
+  padding: 0;
+}
+header h6{
+  color: #777777;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 21px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+#img-section{
+  min-height: 300px;
+}
+
+#img-section img{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+#date-location .box{
+  float: left;
+  width: 300px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+
+}
+
+#date-location .box img{
+  float: left;
+  margin-right: 20px;
+}
+#date-location .box p{
+  margin: 0;
+  padding-top: 10px;
+}
+
+#content h5{
+  color: #16676A;
+  font-size: 17px;
+  line-height: 28px;
+}
+#content p{
+  line-height: 2em;
+  text-align: left;
+  max-width: 42em;
+}
+#content .container{
+  margin-left: 10%;
+}
